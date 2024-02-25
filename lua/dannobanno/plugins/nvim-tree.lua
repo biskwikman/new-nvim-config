@@ -13,7 +13,7 @@ return {
     },
     git = {
       enable = true,
-      ignore = fale,
+      ignore = false,
     },
   },
   keys = {
