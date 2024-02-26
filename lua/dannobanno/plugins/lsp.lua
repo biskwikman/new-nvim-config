@@ -1,4 +1,5 @@
-return  {{ "williamboman/mason.nvim" },
+return  {
+        { "williamboman/mason.nvim" },
         { "williamboman/mason-lspconfig.nvim" },
         {
             "VonHeikemen/lsp-zero.nvim",
