@@ -14,14 +14,26 @@ local ensure_installed = {
     "lua_ls",
     "julials",
     "rust_analyzer",
+    "marksman",
+    'glsl_analyzer',
 }
 
 require('mason').setup({})
 require('mason-lspconfig').setup({
     ensure_installed = ensure_installed,
     handlers = {
-        -- lsp_zero.default_setup,
-        -- rust_analyzer = lsp_zero.noop(),
+        glsl_analyzer = function()
+            require('lspconfig').glsl_analyzer.setup({})
+        end,
+        marksman = function()
+            require('lspconfig').marksman.setup({})
+        end,
+        clangd = function()
+            require('lspconfig').clangd.setup({})
+        end,
+        bashls = function()
+            require('lspconfig').bashls.setup({})
+        end,
         lua_ls = function()
             require('lspconfig').lua_ls.setup({
                 settings = {

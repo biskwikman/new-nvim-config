@@ -27,4 +27,6 @@ return  {
         -- { "hrsh7th/vim-vsnip" },
         { "hrsh7th/cmp-cmdline" },
         { "saadparwaiz1/cmp_luasnip" },
-        { "rafamadriz/friendly-snippets" }}
+        { "rafamadriz/friendly-snippets" },
+        { 'tikhomirov/vim-glsl' },
+}

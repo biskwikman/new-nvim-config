@@ -17,6 +17,7 @@ return {
     },
   },
   keys = {
-    {"<Leader>e", "<cmd>NvimTreeToggle<CR>", desc = "toggle file browser"}
+    {"<Leader>e", "<cmd>NvimTreeToggle<CR>", desc = "toggle file browser"},
+    {"<Leader>t", "<cmd>NvimTreeFocus<CR>", desc = "focus file browser"},
   }
 }
