@@ -1,6 +1,7 @@
 vim.opt.termguicolors = true
 vim.opt.guifont = "monospace:h17"
 vim.opt.signcolumn = "yes"
+vim.opt.colorcolumn = "80"
 
 vim.opt.nu = true
 vim.opt.relativenumber = true

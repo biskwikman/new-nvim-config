@@ -29,4 +29,5 @@ return  {
         { "saadparwaiz1/cmp_luasnip" },
         { "rafamadriz/friendly-snippets" },
         { 'tikhomirov/vim-glsl' },
+        { 'tikhomirov/vim-glsl' },
 }

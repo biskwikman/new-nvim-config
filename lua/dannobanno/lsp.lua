@@ -6,33 +6,33 @@ end)
 local ensure_installed = {
     "bashls",
     "clangd",
-    "pyright",
-    "vimls",
-    "matlab_ls",
-    "marksman",
-    "texlab",
-    "lua_ls",
+    "glsl_analyzer",
     "julials",
-    "rust_analyzer",
+    "lua_ls",
     "marksman",
-    'glsl_analyzer',
+    "matlab_ls",
+    "perlnavigator",
+    "pyright",
+    "texlab",
+    "vimls",
+    "rust_analyzer",
 }
 
 require('mason').setup({})
 require('mason-lspconfig').setup({
     ensure_installed = ensure_installed,
     handlers = {
-        glsl_analyzer = function()
-            require('lspconfig').glsl_analyzer.setup({})
-        end,
-        marksman = function()
-            require('lspconfig').marksman.setup({})
+        bashls = function()
+            require('lspconfig').bashls.setup({})
         end,
         clangd = function()
             require('lspconfig').clangd.setup({})
         end,
-        bashls = function()
-            require('lspconfig').bashls.setup({})
+        glsl_analyzer = function()
+            require('lspconfig').glsl_analyzer.setup({})
+        end,
+        julials = function()
+            require('lspconfig').julials.setup({})
         end,
         lua_ls = function()
             require('lspconfig').lua_ls.setup({
@@ -45,12 +45,29 @@ require('mason-lspconfig').setup({
                 }
             })
         end,
+        marksman = function()
+            require('lspconfig').marksman.setup({})
+        end,
         matlab_ls = function()
             require('lspconfig').matlab_ls.setup({
                 single_file_support = true,
             })
         end,
+        perlnavigator = function()
+            require('lspconfig').perlnavigator.setup({})
+        end,
+        texlab = function()
+            require('lspconfig').texlab.setup({})
+        end,
+        vimls = function()
+            require('lspconfig').vimls.setup({})
+        end,
     },
+})
+
+require('mason-nvim-dap').setup({
+    ensure_installed = { 'codelldb', 'bash', 'stylua' },
+    handlers = {},
 })
 
 -- Diagnostics
